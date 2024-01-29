@@ -43,7 +43,7 @@
   # Replacement for ls
   eza = {
     enable = true;
-    enableAliases = true;
+    enableAliases = false;
   };
 
   # Fuzzy finder
