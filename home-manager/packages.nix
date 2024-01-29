@@ -53,6 +53,7 @@ let
     process-compose
     reattach-to-user-namespace # for tmux
     yt-dlp
+    diskonaut
   ];
 
   nixTools = with pkgs; [
@@ -66,9 +67,9 @@ let
     httpie
   ]);
 
-  rustTools = with pkgs; [
-    rustToolchain
-  ];
+  # rustTools = with pkgs; [
+  #   rustToolchain
+  # ];
 
   scripts = with pkgs; [
     (writeScriptBin "pk" ''
@@ -101,6 +102,6 @@ basic
 ++ misc
 ++ nixTools
 ++ pythonTools
-++ rustTools
+# ++ rustTools
 ++ scripts
 ++ security

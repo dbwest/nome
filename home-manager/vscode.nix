@@ -1,10 +1,12 @@
 { pkgs }:
 
 let
-  colorTheme = "Ayu Dark";
+  colorTheme = "Ayu Dark Bordered";
   font = "JetBrains Mono";
   terminalFont = "JetBrains Mono";
   iconTheme = "material-icon-theme";
+  zoomLevel = 1.25;
+  autosave = "afterDelay";
 
   ext = publisher: name: version: sha256: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
     mktplcRef = { inherit name publisher sha256 version; };
@@ -75,9 +77,11 @@ in
       "dist" = true;
       "tmp" = true;
     };
+    "files.autosave" = autosave;
     "editor.defaultFormatter" = "esbenp.prettier-vscode";
     "terminal.integrated.fontFamily" = terminalFont;
     "workbench.colorTheme" = colorTheme;
     "workbench.iconTheme" = iconTheme;
+    "window.zoomLevel" = zoomLevel;
   };
 }

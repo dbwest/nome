@@ -11,7 +11,7 @@
     nix-darwin = { url = "github:LnL7/nix-darwin"; inputs.nixpkgs.follows = "nixpkgs"; };
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2311.*.tar.gz";
     nuenv = { url = "https://flakehub.com/f/DeterminateSystems/nuenv/0.1.*.tar.gz"; inputs.nixpkgs.follows = "nixpkgs"; };
-    uuidv7 = { url = "git+ssh://git@github.com/DeterminateSystems/uuidv7.git"; inputs.nixpkgs.follows = "nixpkgs"; };
+    # uuidv7 = { url = "git+ssh://git@github.com/DeterminateSystems/uuidv7.git"; inputs.nixpkgs.follows = "nixpkgs"; };
   };
 
   outputs = inputs:
@@ -27,6 +27,7 @@
       stateVersion = "23.11";
       system = "aarch64-darwin";
       username = "davidwest";
+      hostname = "lilmac";
       caches = {
         nixos-org = {
           cache = "https://cache.nixos.org";
@@ -69,18 +70,28 @@
         rev = inputs.self.rev or inputs.self.dirtyRev or null;
         flake-checker = inputs.flake-checker.packages.${system}.default;
         fh = inputs.fh.packages.${system}.default;
-        uuidv7 = inputs.uuidv7.packages.${system}.default;
-        rustToolchain = with inputs.fenix.packages.${system};
-          combine (with stable; [
-            cargo
-            clippy
-            rustc
-            rustfmt
-            rust-src
-          ]);
+        # uuidv7 = inputs.uuidv7.packages.${system}.default;
+        # rustToolchain = with inputs.fenix.packages.${system};
+        #   combine (with stable; [
+        #     cargo
+        #     clippy
+        #     rustc
+        #     rustfmt
+        #     rust-src
+        #   ]);
       };
 
       darwinConfigurations."${username}-${system}" = inputs.nix-darwin.lib.darwinSystem {
+        inherit system;
+        modules = [
+          inputs.self.darwinModules.base
+          inputs.self.darwinModules.caching
+          inputs.home-manager.darwinModules.home-manager
+          inputs.self.darwinModules.home-manager
+        ];
+      };
+
+      darwinConfigurations."lilmac" = inputs.nix-darwin.lib.darwinSystem {
         inherit system;
         modules = [
           inputs.self.darwinModules.base
