@@ -53,7 +53,7 @@
       AppleShowAllExtensions = true;
       AppleShowAllFiles = true;
       AppleShowScrollBars = "WhenScrolling";
-      AppleTemperatureUnit = "Celsius";
+      AppleTemperatureUnit = "Fahrenheit";
       AppleWindowTabbingMode = "fullscreen";
       InitialKeyRepeat = 15;
       KeyRepeat = 2;
