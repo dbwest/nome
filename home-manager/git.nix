@@ -2,8 +2,8 @@
 
 {
   enable = true;
-  userName = "Luc Perkins";
-  userEmail = "lucperkins@gmail.com";
+  userName = "David West";
+  userEmail = "dbwest@skiff.com";
   package = pkgs.gitAndTools.gitFull;
 
   delta = { enable = true; };
