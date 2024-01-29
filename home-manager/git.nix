@@ -3,7 +3,7 @@
 {
   enable = true;
   userName = "David West";
-  userEmail = "dbwest@skiff.com";
+  userEmail = "nomegit@emeraldbunker.maskmy.id";
   package = pkgs.gitAndTools.gitFull;
 
   delta = { enable = true; };
