@@ -8,6 +8,7 @@ let
     unzip
     wget
     zstd
+    nettools.out
   ];
 
   bin = import ./bin.nix {
@@ -24,6 +25,7 @@ let
     awscli2
     dive
     flyctl
+    docker.out
   ];
 
   gitTools = (with pkgs; [
@@ -54,7 +56,6 @@ let
     reattach-to-user-namespace # for tmux
     yt-dlp
     diskonaut
-    bandwhich
   ];
 
   nixTools = with pkgs; [
