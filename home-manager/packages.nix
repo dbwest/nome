@@ -8,7 +8,7 @@ let
     unzip
     wget
     zstd
-    nettools.out
+    sniffnet
   ];
 
   bin = import ./bin.nix {
@@ -22,6 +22,7 @@ let
   databaseTools = with pkgs; [ postgresql_14 redis ];
 
   devOpsTools = with pkgs; [
+    terraform
     awscli2
     dive
     flyctl
@@ -69,9 +70,9 @@ let
     httpie
   ]);
 
-  # rustTools = with pkgs; [
-  #   rustToolchain
-  # ];
+  rustTools = with pkgs; [
+    rustToolchain
+  ];
 
   scripts = with pkgs; [
     (writeScriptBin "pk" ''
@@ -104,6 +105,6 @@ basic
 ++ misc
 ++ nixTools
 ++ pythonTools
-# ++ rustTools
+++ rustTools
 ++ scripts
 ++ security

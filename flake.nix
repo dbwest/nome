@@ -72,14 +72,14 @@
         flake-checker = inputs.flake-checker.packages.${system}.default;
         fh = inputs.fh.packages.${system}.default;
         # uuidv7 = inputs.uuidv7.packages.${system}.default;
-        # rustToolchain = with inputs.fenix.packages.${system};
-        #   combine (with stable; [
-        #     cargo
-        #     clippy
-        #     rustc
-        #     rustfmt
-        #     rust-src
-        #   ]);
+        rustToolchain = with inputs.fenix.packages.${system};
+          combine (with stable; [
+            cargo
+            clippy
+            rustc
+            rustfmt
+            rust-src
+          ]);
       };
 
       darwinConfigurations."${username}-${system}" = inputs.nix-darwin.lib.darwinSystem {
