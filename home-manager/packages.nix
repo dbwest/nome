@@ -54,6 +54,7 @@ let
     reattach-to-user-namespace # for tmux
     yt-dlp
     diskonaut
+    bandwhich
   ];
 
   nixTools = with pkgs; [
