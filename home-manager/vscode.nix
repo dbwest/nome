@@ -36,6 +36,7 @@ in
     thenuprojectcontributors.vscode-nushell-lang
     unifiedjs.vscode-mdx
     vscodevim.vim
+    vscode-extensions.yzhang.markdown-all-in-one
   ]) ++ [
     # Extensions not in Nixpkgs
     (ext "b4dM4n" "nixpkgs-fmt" "0.0.1" "sha256-vz2kU36B1xkLci2QwLpl/SBEhfSWltIDJ1r7SorHcr8=")
@@ -78,7 +79,7 @@ in
       "dist" = true;
       "tmp" = true;
     };
-    "files.autosave" = autosave;
+    "files.autoSave" = autosave;
     "editor.defaultFormatter" = "esbenp.prettier-vscode";
     "terminal.integrated.fontFamily" = terminalFont;
     "workbench.colorTheme" = colorTheme;
