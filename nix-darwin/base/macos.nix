@@ -4,6 +4,13 @@
   configurationRevision = pkgs.rev;
 
   defaults = {
+    menuExtraClock = {
+      IsAnalog = false;
+      Show24Hour = false;
+      ShowAMPM = true;
+      ShowDate = 0;
+    };
+
     dock = {
       appswitcher-all-displays = false;
       autohide = true;
