@@ -82,7 +82,7 @@
       "com.apple.sound.beep.volume" = 0.0;
       "com.apple.springing.delay" = 0.5;
       "com.apple.springing.enabled" = false;
-      "com.apple.swipescrolldirection" = true;
+      "com.apple.swipescrolldirection" = false;
       "com.apple.trackpad.enableSecondaryClick" = true;
       "com.apple.trackpad.scaling" = 1.0;
       "com.apple.trackpad.trackpadCornerClickBehavior" = null;
