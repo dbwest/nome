@@ -27,6 +27,7 @@ let
     dive
     flyctl
     docker.out
+    powershell.out
   ];
 
   gitTools = (with pkgs; [
