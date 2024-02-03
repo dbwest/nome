@@ -50,6 +50,7 @@ in
     (ext "teabyii" "ayu" "1.0.5" "sha256-+IFqgWliKr+qjBLmQlzF44XNbN7Br5a119v9WAnZOu4=")
     (ext "vue" "volar" "1.8.24" "sha256-KK6u9JFndTctq9h8Irhb0LzrJH9peNsq9+TzaNE9b8o=")
     (ext "whizkydee" "material-palenight-theme" "2.0.3" "sha256-qz2pz9JlnO2OV3eJnRqzbcic1lzpl0ViygwhNjZOWpI=")
+    (ext "premparihar" "gotestexplorer" "0.1.13" "sha256-CIqZ1yE9bAHuKvVcdD+Ph8kPgo/a9N+zqELYWxVV8F8=")
   ];
 
   globalSnippets = { };
