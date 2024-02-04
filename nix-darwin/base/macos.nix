@@ -49,7 +49,7 @@
       AppleEnableMouseSwipeNavigateWithScrolls = true;
       AppleEnableSwipeNavigateWithScrolls = true;
       AppleFontSmoothing = 2;
-      AppleICUForce24HourTime = true;
+      AppleICUForce24HourTime = false;
       AppleInterfaceStyle = "Dark";
       AppleInterfaceStyleSwitchesAutomatically = false;
       AppleKeyboardUIMode = 3;
