@@ -188,6 +188,21 @@
         "type": "github"
       }
     },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1649676176,
+        "narHash": "sha256-OWKJratjt2RW151VUlJPRALb7OU2S5s+f0vLj4o1bHM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "a4b154ebbdc88c8498a5c7b01589addc9e9cb678",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -289,7 +304,8 @@
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
-        "nuenv": "nuenv"
+        "nuenv": "nuenv",
+        "solana-nix": "solana-nix"
       }
     },
     "rust-analyzer-src": {
@@ -397,6 +413,45 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "solana-nix": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "solanaSrc": "solanaSrc"
+      },
+      "locked": {
+        "lastModified": 1649707081,
+        "narHash": "sha256-6GU9hubKst6f9iKk9syYxVGp190QaccAP3yoBzZeHK0=",
+        "owner": "cideM",
+        "repo": "solana-nix",
+        "rev": "13ce6a709a179dd3ae024f0a7077a4f5e1ae3e06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cideM",
+        "repo": "solana-nix",
+        "type": "github"
+      }
+    },
+    "solanaSrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649463746,
+        "narHash": "sha256-haf301lOwDhB2/0BweDbrHP5wruodZo02gwlnhsG9mE=",
+        "owner": "solana-labs",
+        "repo": "solana",
+        "rev": "e02542003d2c7290704ce155b0dee1d176a6ab27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "solana-labs",
+        "repo": "solana",
+        "rev": "e02542003d2c7290704ce155b0dee1d176a6ab27",
         "type": "github"
       }
     },

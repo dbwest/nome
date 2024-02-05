@@ -8,7 +8,6 @@ let
     unzip
     wget
     zstd
-    sniffnet
   ];
 
   bin = import ./bin.nix {
@@ -38,8 +37,10 @@ let
   jsTools = (with pkgs; [
     bun
     deno
+    typescript
   ] ++ (with nodePackages; [
     pnpm
+    ts-node
   ]));
 
   macTools = with pkgs.darwin.apple_sdk.frameworks; [
@@ -57,7 +58,9 @@ let
     process-compose
     reattach-to-user-namespace # for tmux
     yt-dlp
-    diskonaut
+    solana-nix
+    # solana-cli.out
+    stats
   ];
 
   nixTools = with pkgs; [
@@ -88,6 +91,7 @@ let
   security = with pkgs; [
     certstrap
     pinentry_mac
+    sniffnet
   ];
 
   # These are broken on aarch64-darwin but I hope to add them someday

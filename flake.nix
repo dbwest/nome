@@ -5,6 +5,7 @@
 
   inputs = {
     fenix = { url = "https://flakehub.com/f/nix-community/fenix/0.1.*.tar.gz"; inputs.nixpkgs.follows = "nixpkgs"; };
+    solana-nix = { url = "github:cideM/solana-nix"; inputs.nixpkgs.follows = "nixpkgs"; };
     fh = { url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.*.tar.gz"; inputs.nixpkgs.follows = "nixpkgs"; };
     flake-checker = { url = "https://flakehub.com/f/DeterminateSystems/flake-checker/0.1.*.tar.gz"; inputs.nixpkgs.follows = "nixpkgs"; };
     flake-schemas.url = "https://flakehub.com/f/DeterminateSystems/flake-schemas/0.1.*.tar.gz";
@@ -71,6 +72,7 @@
         rev = inputs.self.rev or inputs.self.dirtyRev or null;
         flake-checker = inputs.flake-checker.packages.${system}.default;
         fh = inputs.fh.packages.${system}.default;
+        solana-nix = inputs.solana-nix.packages.${system}.solana;
         # uuidv7 = inputs.uuidv7.packages.${system}.default;
         rustToolchain = with inputs.fenix.packages.${system};
           combine (with stable; [
